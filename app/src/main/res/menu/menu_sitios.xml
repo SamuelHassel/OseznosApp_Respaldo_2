@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.ruizvilla.frontino_para_explorar.SitiosActivity">
+    <item
+    android:id="@+id/mVolver"
+    android:title="@string/mVolver"
+    />
+</menu>

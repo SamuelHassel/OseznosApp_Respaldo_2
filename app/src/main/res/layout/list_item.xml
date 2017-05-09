@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/osofrontino1"
+        android:id="@+id/iFoto"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorfondo"
+            android:id="@+id/tNombre"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorfondo"
+            android:id="@+id/tDescrip"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:text="@string/app_name"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorfondo"
+            android:id="@+id/tDirec"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <!--////  D) Se crea el item con imagen y varios textview que se replicaran con darga
+     para ser cargados en el Objeto ppal ListViwe
+     Explican tmabien lo de los margenes con marginStart 5dp es la separaicon -->
