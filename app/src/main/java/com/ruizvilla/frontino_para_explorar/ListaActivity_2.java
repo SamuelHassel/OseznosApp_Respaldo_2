@@ -43,7 +43,7 @@ public class ListaActivity_2 extends AppCompatActivity {
             new Lista_Entrada(R.drawable.a_2, "Sistema de Parques", "http://www.parquesnacionales.gov.co","Tel: 01 8000 6233"),
             new Lista_Entrada(R.drawable.a_3, "GreenPeace", "https://www.greenpeace.de","Tel: 5246354"),
             new Lista_Entrada(R.drawable.a_4, "Policia Ambiental", "http://www.cba.gov.ar/policia-ambiental","Tel: 456236"),
-            new Lista_Entrada(R.drawable.a_5, "Sociedad Protectora ", "http://www.sociedadprotectoradeanimales.org","Tel: 01 800 22 333 11"),
+            new Lista_Entrada(R.drawable.a_5, "Sociedad Protectora ", "http://www.sociedadprotectora.org","Tel: 01 800 22 333 11"),
             new Lista_Entrada(R.drawable.a_6, "Instituto Von Humboldt", "http://www.humboldt.org.co","Tel:25556633")
     };
 

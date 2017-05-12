@@ -28,14 +28,14 @@ public class DrawerActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -119,7 +119,7 @@ public class DrawerActivity extends AppCompatActivity
             intent = new Intent (DrawerActivity.this, ListaActivity_2.class);
             startActivity(intent);
         } else if (id == R.id.nav_manage) {
-            intent = new Intent (DrawerActivity.this, ListaActivity_2.class);
+            intent = new Intent (DrawerActivity.this, ListaActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_share) {
             intent = new Intent (DrawerActivity.this, ListaActivity.class);

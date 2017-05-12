@@ -44,8 +44,8 @@ public class ListaActivity extends AppCompatActivity {
             new Lista_Entrada(R.drawable.oso_2, "Alto de Musinga", "Hábitat nativo", "Zona de precaución"),
             new Lista_Entrada(R.drawable.oso_3, "Vereda Nore", "Zona de avistamientos", "Zona de apreciación"),
             new Lista_Entrada(R.drawable.oso_4, "Vereda El cerro", "Zona de avistamientos", "Zona de apreciación"),
-            new Lista_Entrada(R.drawable.c_1, "Corregimiento Nutibara", "Zona de avistamientos", "Zona de apreciación"),
-            new Lista_Entrada(R.drawable.c_2, "Alto de Ponton", "Hábitat nativo", "Zona de precaución")
+            new Lista_Entrada(R.drawable.oso_5, "Corregimiento Nutibara", "Zona de avistamientos", "Zona de apreciación"),
+            new Lista_Entrada(R.drawable.oso_6, "Alto de Ponton", "Hábitat nativo", "Zona de precaución")
     };
 
     @Override
