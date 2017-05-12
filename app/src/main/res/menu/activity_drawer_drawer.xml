@@ -5,31 +5,31 @@
         <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Pantalla 1" />
+            android:title="Zonas de avistamientos" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Pantalla 2" />
+            android:title="Agencias de protección" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Pantalla 3" />
+            android:title="Ecoturismo" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Pantalla 4" />
+            android:title="Identificación de oso" />
     </group>
 <!--Esto es un divisor, division de menu la rayita divisora-->
-    <item android:title="Otras cosas">
+    <item android:title="Contactar instutucion protectora">
         <menu>
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Cosa 1" />
+                android:title="Coorpuraba" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Cosa 2" />
+                android:title="Inderena" />
         </menu>
     </item>
 

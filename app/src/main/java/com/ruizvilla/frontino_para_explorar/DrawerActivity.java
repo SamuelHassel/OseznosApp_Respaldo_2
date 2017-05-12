@@ -110,18 +110,23 @@ public class DrawerActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
             intent = new Intent (DrawerActivity.this, ListaActivity.class);
             startActivity(intent);
+        } else if (id == R.id.nav_gallery) {
+            intent = new Intent (DrawerActivity.this, ListaActivity_2.class);
+            startActivity(intent);
         } else if (id == R.id.nav_slideshow) {
-
+            intent = new Intent (DrawerActivity.this, ListaActivity_2.class);
+            startActivity(intent);
         } else if (id == R.id.nav_manage) {
-
+            intent = new Intent (DrawerActivity.this, ListaActivity_2.class);
+            startActivity(intent);
         } else if (id == R.id.nav_share) {
-
+            intent = new Intent (DrawerActivity.this, ListaActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_send) {
-
+            intent = new Intent (DrawerActivity.this, ListaActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
