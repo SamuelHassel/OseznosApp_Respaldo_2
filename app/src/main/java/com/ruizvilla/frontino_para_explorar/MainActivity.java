@@ -1,6 +1,7 @@
 package com.ruizvilla.frontino_para_explorar;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,14 +11,22 @@ public class MainActivity extends AppCompatActivity {
 
 Intent intent;
     String username, correo;
+    SharedPreferences prefs;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /*Bundle extras = getIntent().getExtras(); // Extrae cosas desde el inten en login, tambien se copia en el perfil
+
+        //Accediendo al archivo de preferencias
+        prefs = getSharedPreferences("MisPreferencias",MODE_PRIVATE);
+        editor = prefs.edit();
+
+
+        Bundle extras = getIntent().getExtras(); // Extrae cosas desde el inten en login, tambien se copia en el perfil
         username = extras.getString("username",username);//
-        correo = extras.getString("correo", correo);*/
+        correo = extras.getString("correo", correo);
     }
 
     //Esta parte es** la que relaciona un activity con el menu OVERFLOW
@@ -33,6 +42,9 @@ Intent intent;
 
         switch (id){
             case R.id.mCerrar:
+                editor.putInt("login",-1);
+                editor.commit();
+
                 intent = new Intent (MainActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
@@ -54,8 +66,8 @@ Intent intent;
                 break;
             case R.id.mMiPerfil:
                 intent = new Intent (MainActivity.this, PerfilActivity.class);
-                /*intent.putExtra("username", username);
-                intent.putExtra("correo", correo);*/
+                intent.putExtra("username", username);
+                intent.putExtra("correo", correo);
                 startActivity(intent);
                 finish();//este comando no se usa cuando hay envio de datos
                 break;
