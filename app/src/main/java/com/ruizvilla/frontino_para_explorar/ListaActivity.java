@@ -2,6 +2,7 @@ package com.ruizvilla.frontino_para_explorar;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +27,9 @@ public class ListaActivity extends AppCompatActivity {
 
     Intent intent;
     ListView listView;
+    //Para preferencias
+    SharedPreferences prefs;
+    SharedPreferences.Editor editor;
     //// Este ListViwe se invoca luego abajo en A) se implementa
 
 
@@ -52,6 +56,10 @@ public class ListaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista);
+
+        //Accediendo al archivo de preferencias
+        prefs = getSharedPreferences("MisPreferencias",MODE_PRIVATE);
+        editor = prefs.edit();
 
         //// A) aca se relacional el objeto ListView con el xml
         // Ojo la palabra data aca la puse como datos y es el argumento que se ve abajo
@@ -189,6 +197,9 @@ public boolean onCreateOptionsMenu(Menu menu) {
 
         switch (id){
             case R.id.mCerrar:
+                //Ejecucion de reseteo
+                editor.putInt("login",-1);
+                editor.commit();
                 intent = new Intent(ListaActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();

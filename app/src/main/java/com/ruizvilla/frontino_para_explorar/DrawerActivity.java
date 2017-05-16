@@ -1,6 +1,7 @@
 package com.ruizvilla.frontino_para_explorar;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,6 +19,9 @@ public class DrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Intent intent;
+    //Para preferencias
+    SharedPreferences prefs;
+    SharedPreferences.Editor editor;
 
 
 
@@ -27,6 +31,10 @@ public class DrawerActivity extends AppCompatActivity
         setContentView(R.layout.activity_drawer);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        //Accediendo al archivo de preferencias
+        prefs = getSharedPreferences("MisPreferencias",MODE_PRIVATE);
+        editor = prefs.edit();
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +81,9 @@ public class DrawerActivity extends AppCompatActivity
 
             switch (id){
                 case R.id.mCerrar:
+                    //Ejecucion de reseteo
+                    editor.putInt("login",-1);
+                    editor.commit();
                     intent = new Intent(DrawerActivity.this, LoginActivity.class);
                     startActivity(intent);
                     finish();

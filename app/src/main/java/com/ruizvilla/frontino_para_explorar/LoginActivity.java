@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         if(prefs.getInt("login", -1)==1){
             //Entonces hay logueado, entonces proceda a Inten
            // Toast.makeText(getApplicationContext(), "ENTRO COMO SI ESTUVIERA LOGUEADO", Toast.LENGTH_SHORT).show();
-            intent = new Intent (LoginActivity.this, MainActivity.class);
+            intent = new Intent (LoginActivity.this, DrawerActivity.class);
             intent.putExtra("username", username);// Esto se copia igual en un case de el MAIN
             intent.putExtra("correo", correo);
             startActivity(intent);
@@ -71,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
                     editor.commit();
 
 
-                    intent = new Intent (LoginActivity.this, MainActivity.class);
+                    intent = new Intent (LoginActivity.this, DrawerActivity.class);
                     intent.putExtra("username", username);// Esto se copia igual en un case de el MAIN
                     intent.putExtra("correo", correo);
                     startActivity(intent);

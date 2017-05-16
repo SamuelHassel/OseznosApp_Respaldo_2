@@ -42,6 +42,7 @@ Intent intent;
 
         switch (id){
             case R.id.mCerrar:
+                //Ejecucion de reseteo
                 editor.putInt("login",-1);
                 editor.commit();
 
