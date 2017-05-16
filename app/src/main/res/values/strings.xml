@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Frontino por explorar</string>
+    <string name="app_name">Oseznos App</string>
     <string name="username">Nombre de usuario</string>
     <string name="password">Contraseña</string>
     <string name="iniciar">Iniciar</string>
@@ -10,14 +10,14 @@
 
     <string name="p_principal">Principal</string>
     <string name="salir">Salir</string>
-    <string name="contenido">Frontino por explorar es una App diseñada con el fin de incentivar el conocimiento y disfrute del patrimonio “frontineño” y a su vez sirviendo como herramienta pedagógica para la sensibilización en el cuidado de los recursos naturales en especial la del Oso de anteojo, animal en via de extinción y que lleva como nombre científico el nombre de este interesante municipio (Frontino). </string>
+    <string name="contenido">Oseznos es una App diseñada con el fin de incentivar el conocimiento y disfrute del patrimonio “frontineño” y a su vez sirviendo como herramienta pedagógica para la sensibilización en el cuidado de los recursos naturales en especial la del Oso de anteojo, animal en via de extinción y que lleva como nombre científico el nombre de este interesante municipio (Frontino). </string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="mFrag1">Sitio_1</string>
     <string name="mFrag2">Sitio_2</string>
     <string name="title_activity_sitios">SitiosActivity</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Opciones</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_hoteles">Hoteles</string>
     <string name="title_activity_bares">Bares</string>
@@ -30,10 +30,10 @@
     <!-- String del menu sitios, hoteles, bares, hoteles -->
     <string name="mVolver">Home</string>
     <string name="mCerrar">Cerrar</string>
-    <string name="title_activity_drawer">DrawerActivity</string>
+    <string name="title_activity_drawer">Pantalla principal</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps">Mapas</string>
 
 </resources>

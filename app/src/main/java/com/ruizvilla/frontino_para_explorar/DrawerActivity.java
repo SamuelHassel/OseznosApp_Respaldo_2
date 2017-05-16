@@ -127,7 +127,7 @@ public class DrawerActivity extends AppCompatActivity
             intent = new Intent (DrawerActivity.this, ListaActivity_2.class);
             startActivity(intent);
         } else if (id == R.id.nav_slideshow) {
-            intent = new Intent (DrawerActivity.this, ListaActivity_2.class);
+            intent = new Intent (DrawerActivity.this, ListaActivity_eco.class);
             startActivity(intent);
         } else if (id == R.id.nav_manage) {
             intent = new Intent (DrawerActivity.this, ListaActivity.class);

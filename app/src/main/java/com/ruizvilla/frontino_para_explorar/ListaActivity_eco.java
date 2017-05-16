@@ -1,26 +1,25 @@
 package com.ruizvilla.frontino_para_explorar;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.view.menu.ExpandedMenuView;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
+        import android.content.Context;
+        import android.content.Intent;
+        import android.content.SharedPreferences;
+        import android.os.Bundle;
+        import android.support.annotation.NonNull;
+        import android.support.annotation.Nullable;
+        import android.support.v7.app.AppCompatActivity;
+        import android.view.LayoutInflater;
+        import android.view.Menu;
+        import android.view.MenuItem;
+        import android.view.View;
+        import android.view.ViewGroup;
+        import android.widget.AdapterView;
+        import android.widget.ArrayAdapter;
+        import android.widget.ImageView;
+        import android.widget.ListView;
+        import android.widget.TextView;
+        import android.widget.Toast;
 
-public class ListaActivity extends AppCompatActivity {
+public class ListaActivity_eco extends AppCompatActivity {
 // Nuevo adapador
 
 
@@ -44,18 +43,18 @@ public class ListaActivity extends AppCompatActivity {
             // Estos son objetos del tipo lista de entrada y en el orden de construccion alli
             // asi se programo su nomenclatura: public Lista_Entrada(int idImagen, String nombre, String descrip, String direct) {
             //Al parecer es congfuso porque la clase, el objeto y el nombre del metodo constructor es el mismo
-            new Lista_Entrada(R.drawable.oso_1, "Vereda San Lazaro", "Zona de avistamientos", "Zona de apreciación"),
-            new Lista_Entrada(R.drawable.oso_2, "Alto de Musinga", "Hábitat nativo", "Zona de precaución"),
-            new Lista_Entrada(R.drawable.oso_3, "Vereda Nore", "Zona de avistamientos", "Zona de apreciación"),
-            new Lista_Entrada(R.drawable.oso_4, "Vereda El cerro", "Zona de avistamientos", "Zona de apreciación"),
-            new Lista_Entrada(R.drawable.oso_5, "Corregimiento Nutibara", "Zona de avistamientos", "Zona de apreciación"),
-            new Lista_Entrada(R.drawable.oso_6, "Alto de Ponton", "Hábitat nativo", "Zona de precaución")
+            new Lista_Entrada(R.drawable.h1, "Hoteles", "!Dejese atender!",""),
+            new Lista_Entrada(R.drawable.r1, "Restaurantes", "Gastronomia local",""),
+            new Lista_Entrada(R.drawable.b1, "Bares", "Para un buen rato",""),
+            new Lista_Entrada(R.drawable.h2, "Hoteles", "!Dejese atender!",""),
+            new Lista_Entrada(R.drawable.r2, "Restaurantes", "Gastronomia local",""),
+            new Lista_Entrada(R.drawable.b2, "Bares", "Para un buen rato",""),
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lista);
+        setContentView(R.layout.activity_lista_eco);
 
         //Accediendo al archivo de preferencias
         prefs = getSharedPreferences("MisPreferencias",MODE_PRIVATE);
@@ -63,7 +62,7 @@ public class ListaActivity extends AppCompatActivity {
 
         //// A) aca se relacional el objeto ListView con el xml
         // Ojo la palabra data aca la puse como datos y es el argumento que se ve abajo
-        listView = (ListView) findViewById(R.id.lista);
+        listView = (ListView) findViewById(R.id.lista_3);
 
         //_________________________________
         //// C) Igual que en parquesAvtivity que usamos adaptatores para los TABS para colocar encima los TAPS entonces aca tambien definimos
@@ -82,68 +81,57 @@ public class ListaActivity extends AppCompatActivity {
         ///PROGRAMANDO LOS LISTENER PARA LA LISTA
 // J) Al dar clic en un item se imprime por la linea toast comentada la posicion del elemento pulsado, con el metodo comentado abajo
         // que tiene un switch se puede generar ordenes de navegacion al tocar items
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             // Esto de abajo es la implementacion y se hizo automaticamente
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Ojo con eso del contexto, ojo que para imprimir el in se pasa a entero
-                // acceso a un dato relacionado con la psocion pulsada
-                //String opcion =  ((Lista_Entrada)parent.getItemAtPosition(position)).getNombre();
-
-                //Toast.makeText(getApplicationContext(), String.valueOf(position),Toast.LENGTH_SHORT).show();
-
-                //Toast.makeText(getApplicationContext(), opcion ,Toast.LENGTH_SHORT).show();
-
-
-
-  // Para que los botones envien a lugares
-      switch (position){
-          // No me deja ir a los activity main
-          case 0:
-              intent = new Intent (ListaActivity.this, MapsActivity.class );
-              startActivity(intent);
-              finish();
-              break;
-          case 1:
-              intent = new Intent (ListaActivity.this, MapsActivity.class );
-              startActivity(intent);
-              finish();
-              break;
-          case 2:
-              intent = new Intent (ListaActivity.this, MapsActivity.class );
-              startActivity(intent);
-              finish();
-              break;
-          case 3:
-              intent = new Intent (ListaActivity.this, MapsActivity.class );
-              startActivity(intent);
-              finish();
-              break;
-          case 4:
-              intent = new Intent (ListaActivity.this, MapsActivity.class );
-              startActivity(intent);
-              finish();
-              break;
-          case 5:
-              intent = new Intent (ListaActivity.this, MapsActivity.class );
-              startActivity(intent);
-              finish();
-              break;
+                // Para que los botones envien a lugares
+                switch (position){
+                    // No me deja ir a los activity main
+                    case 0:
+                        intent = new Intent (ListaActivity_eco.this, Hoteles.class );
+                        startActivity(intent);
+                        finish();
+                        break;
+                    case 1:
+                        intent = new Intent (ListaActivity_eco.this, SitiosActivity.class );
+                        startActivity(intent);
+                        finish();
+                        break;
+                    case 2:
+                        intent = new Intent (ListaActivity_eco.this, Bares.class );
+                        startActivity(intent);
+                        finish();
+                        break;
+                    case 3:
+                        intent = new Intent (ListaActivity_eco.this, Bares.class );
+                        startActivity(intent);
+                        finish();
+                        break;
+                    case 4:
+                        intent = new Intent (ListaActivity_eco.this, Bares.class );
+                        startActivity(intent);
+                        finish();
+                        break;
+                    case 5:
+                        intent = new Intent (ListaActivity_eco.this, Bares.class );
+                        startActivity(intent);
+                        finish();
+                        break;
                 }
 
 
-
-                //____________________________________________________fin del switch
             }
         });
     }
- //NECESITO TOMAR ESTA INFORMACION Y ADAPTARLA CON UN ADAPTADOR ENTONCES SE CREARA CLASE ADAPADOR
+    //NECESITO TOMAR ESTA INFORMACION Y ADAPTARLA CON UN ADAPTADOR ENTONCES SE CREARA CLASE ADAPADOR
 
 
     // H) heredado del tipo de dato ArrayAdapter del tipo Lista de entrada, dice error damos onclick para que se cree constructor
 
-    class  Adapter extends  ArrayAdapter<Lista_Entrada>{
-       //H_1 ) Este es el constructor que se crea por el bombillito, se modifica pasandole el contexto de la applic y el listado de datos, en super
+    class  Adapter extends ArrayAdapter<Lista_Entrada> {
+        //H_1 ) Este es el constructor que se crea por el bombillito, se modifica pasandole el contexto de la applic y el listado de datos, en super
         // OJOOOO en el argumento de super se indica DONDE SE VA A PONER LA ADAPTACION
         public Adapter(@NonNull Context context, Lista_Entrada[] datos){
             super(context, R.layout.list_item, datos); // Super es el colocador
@@ -192,14 +180,14 @@ public class ListaActivity extends AppCompatActivity {
         }
     }
 
-//___________________________________________
+    //___________________________________________
 ///Esta parte es** la que relaciona un activity con el menu OVERFLOW
-@Override
-public boolean onCreateOptionsMenu(Menu menu) {
-    getMenuInflater().inflate(R.menu.menu_perfil, menu);
-    // Pueden compartir un mismo menu para varias cosas, y se invoca desde aca
-    return true;
-}
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_perfil, menu);
+        // Pueden compartir un mismo menu para varias cosas, y se invoca desde aca
+        return true;
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -210,13 +198,13 @@ public boolean onCreateOptionsMenu(Menu menu) {
                 //Ejecucion de reseteo
                 editor.putInt("login",-1);
                 editor.commit();
-                intent = new Intent(ListaActivity.this, LoginActivity.class);
+                intent = new Intent(ListaActivity_eco.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
                 break;
 
             case R.id.mPrincipal:
-                intent = new Intent (ListaActivity.this, DrawerActivity.class);
+                intent = new Intent (ListaActivity_eco.this, DrawerActivity.class);
                 // No se porque para volver a principal tiene que estar los putExtra
                 /*intent.putExtra("username", username);
                 intent.putExtra("correo", correo);*/
@@ -232,6 +220,7 @@ public boolean onCreateOptionsMenu(Menu menu) {
 
 
 }
+
 
 
 

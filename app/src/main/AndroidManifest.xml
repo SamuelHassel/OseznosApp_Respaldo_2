@@ -30,7 +30,7 @@
         <activity
             android:name=".SitiosActivity"
             android:label="@string/title_activity_sitios"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Hoteles"
             android:label="@string/title_activity_hoteles"
@@ -39,14 +39,12 @@
             android:name=".Bares"
             android:label="@string/title_activity_bares"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ListaActivity"></activity>
-        <activity android:name=".ListaActivity_2"></activity>
+        <activity android:name=".ListaActivity" />
+        <activity android:name=".ListaActivity_2" />
         <activity
             android:name=".DrawerActivity"
             android:label="@string/title_activity_drawer"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -58,13 +56,12 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value=" AIzaSyDHN2Z-SxVtONj_P1o_LgQvSjYnCbojQbc"/>
+            android:value=" AIzaSyDHN2Z-SxVtONj_P1o_LgQvSjYnCbojQbc" />
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps">
-
-        </activity>
+            android:label="@string/title_activity_maps"></activity>
+        <activity android:name=".ListaActivity_eco"></activity>
     </application>
 
 </manifest>

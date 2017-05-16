@@ -73,10 +73,10 @@ public class Bares extends AppCompatActivity {
 
         switch (id){
             case R.id.mVolver:
-                intent = new Intent(Bares.this, MainActivity.class);
+                intent = new Intent(Bares.this, DrawerActivity.class);
                 // No se porque para volver a principal tiene que estar los putExtra
-                intent.putExtra("username", username);
-                intent.putExtra("correo", correo);
+                /*intent.putExtra("username", username);
+                intent.putExtra("correo", correo);*/
                 startActivity(intent);
                 finish();
                 break;

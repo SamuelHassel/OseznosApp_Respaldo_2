@@ -98,10 +98,10 @@ public class SitiosActivity extends AppCompatActivity {
 
         switch (id){
             case R.id.mVolver:
-                intent = new Intent (SitiosActivity.this, MainActivity.class);
+                intent = new Intent (SitiosActivity.this, DrawerActivity.class);
                 // No se porque para volver a principal tiene que estar los putExtra
-                intent.putExtra("username", username);
-                intent.putExtra("correo", correo);
+               /* intent.putExtra("username", username);
+                intent.putExtra("correo", correo);*/
                 startActivity(intent);
                 finish();
                 break;
